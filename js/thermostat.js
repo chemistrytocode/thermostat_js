@@ -19,6 +19,7 @@ $(document).ready(function () {
   $('#temperature-reset').click(function () {
     thermostat.reset()
     updateTemperature()
+    updateUsage()
   })
 
   $('#ps-on').click(function () {
