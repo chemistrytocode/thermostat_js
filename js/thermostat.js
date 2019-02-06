@@ -33,8 +33,11 @@ $(document).ready(function () {
 
   function updateTemperature () {
     $('#output').text(thermostat.temperature())
+
   };
   function updateUsage() {
     $('#usage').text(thermostat.currentUsage())
+    $('#usage').attr('class', thermostat.currentUsage())
+    // $('#usage').css({"background-color: red"});
   }
 })
