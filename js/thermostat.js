@@ -1,18 +1,34 @@
 // interface.js
-$(document).ready(function() {
-  $('#temperature-up').click(function(){
-    $('#output').append("You staying for games or going to the gym? ");
-  });
-  $('#temperature-down').click(function(){
-    $('#output').append("Games :) ");
-  });
-  $('#temperature-reset').click(function(){
-    $('#output').append("Gym :( ");
-  });
-  $('#ps-on').click(function(){
-    $('#output').append("Sleep :o ");
-  });
-  $('#ps-off').click(function(){
-    $('#output').append("Food :D");
-  });
-});
+$(document).ready(function () {
+  var thermostat = new Thermostat()
+  updateTemperature()
+
+  $('#temperature-up').click(function () {
+    thermostat.up()
+    updateTemperature()
+  })
+
+  $('#temperature-down').click(function () {
+    thermostat.down()
+    updateTemperature()
+  })
+
+  $('#temperature-reset').click(function () {
+    thermostat.reset()
+    updateTemperature()
+  })
+
+  $('#ps-on').click(function () {
+    thermostat.power_saving_on()
+    $('#PS_sign').text('Power Saving is ON!')
+  })
+
+  $('#ps-off').click(function () {
+    thermostat.power_saving_off()
+    $('#PS_sign').text('Power Saving is OFF!')
+  })
+
+  function updateTemperature () {
+    $('#output').text(thermostat.temperature())
+  };
+})

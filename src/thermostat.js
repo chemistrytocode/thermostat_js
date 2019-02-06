@@ -9,12 +9,17 @@ Thermostat.prototype.temperature = function () {
   return this._degrees
 }
 
+Thermostat.prototype.currentUsage = function() {
+  this.checkUsage()
+  return this._usage;
+}
+
 Thermostat.prototype.up = function () {
-  if (this._degrees <= this._maximum) { this._degrees++ }
+  if (this._degrees < this._maximum) { this._degrees++ }
 }
 
 Thermostat.prototype.down = function () {
-  if (this._degrees >= this._minimum) { this._degrees-- }
+  if (this._degrees > this._minimum) { this._degrees-- }
 }
 
 Thermostat.prototype.power_saving_on = function () {
