@@ -2,6 +2,27 @@
   <head>
   <title>Thermostat</title>
   </head>
+    <!-- <script src="js/jquery.min.js>"</script> -->
+    <script src="js/thermostat.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#temperature-up').click(function(){
+          $('#output').append("You staying for games or going to the gym? ");
+        });
+        $('#temperature-down').click(function(){
+          $('#output').append("Games :) ");
+        });
+        $('#temperature-reset').click(function(){
+          $('#output').append("Gym :( ");
+        });
+      });
+
+
+    </script>
+
+
+
   <body>
   <h1>Temperature</h1>
   <button id ="temperature-up">+</button>
@@ -9,6 +30,6 @@
   <button id ="temperature-reset">Rrrr!</button>
   <button id ="ps-on">PS On</button>
   <button id ="ps-off">PS Off</button>
-  <script src="js/thermostat.js"></script>
+  <p id='output'>Hello<p>
   </body>
 </html>
