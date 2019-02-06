@@ -2,15 +2,18 @@
 $(document).ready(function () {
   var thermostat = new Thermostat()
   updateTemperature()
+  updateUsage()
 
   $('#temperature-up').click(function () {
     thermostat.up()
     updateTemperature()
+    updateUsage()
   })
 
   $('#temperature-down').click(function () {
     thermostat.down()
     updateTemperature()
+    updateUsage()
   })
 
   $('#temperature-reset').click(function () {
@@ -31,4 +34,7 @@ $(document).ready(function () {
   function updateTemperature () {
     $('#output').text(thermostat.temperature())
   };
+  function updateUsage() {
+    $('#usage').text(thermostat.currentUsage())
+  }
 })
