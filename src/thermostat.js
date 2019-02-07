@@ -9,9 +9,9 @@ Thermostat.prototype.temperature = function () {
   return (this._degrees)
 }
 
-Thermostat.prototype.currentUsage = function() {
+Thermostat.prototype.currentUsage = function () {
   this.checkUsage()
-  return this._usage;
+  return this._usage
 }
 
 Thermostat.prototype.up = function () {
@@ -35,7 +35,5 @@ Thermostat.prototype.reset = function () {
 }
 
 Thermostat.prototype.checkUsage = function () {
-  if (this.temperature() < 18) { this._usage = 'low-usage' }
-  else if (this.temperature() < 25) { this._usage = 'medium-usage' }
-  else { this._usage = 'high-usage' }
+  if (this.temperature() < 18) { this._usage = 'low-usage' } else if (this.temperature() < 25) { this._usage = 'medium-usage' } else { this._usage = 'high-usage' }
 }

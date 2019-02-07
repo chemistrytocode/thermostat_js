@@ -21,7 +21,6 @@ $(document).ready(function () {
     thermostat.reset()
     updateTemperature()
     updateUsage()
-    display_weather()
   })
 
   $('#ps-on').click(function () {
@@ -51,10 +50,17 @@ $(document).ready(function () {
   $('#current-city').change(function () {
     var city = $('#current-city').val()
     $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function (data) {
-      $('#current-temperature').text('Temp in ' + city + ' ' + data.main.temp + 'c')
+      $('#current-temperature').text('Temp in ' + city + ' ' + data.main.temp + ' c')
+
     })
   })
 
 
+  $('#current-city').change(function () {
+      var city = $('#current-city').val()
+      $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function (data) {
+      $('#weather-condition').attr('src','http://openweathermap.org/img/w/' + data.weather[0].icon + '.png')
+    })
+  })
 
 })
