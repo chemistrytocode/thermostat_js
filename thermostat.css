@@ -1,5 +1,5 @@
 body {
-  font-family: Arial;
+  font-family: Helvetica;
 }
 
 .thermo_container {
@@ -12,18 +12,6 @@ top: 100px;
 left: 50%;
 transform: translate(-50%);
 }
-
-/* .inner_thermo {
-  position: absolute;
-  background-color: orange;
-  width: 350px;
-  height: 350px;
-  border-radius: 100%;
-position: absolute;
-top: 25px;
-left: 50%;
-transform: translate(-50%);
-} */
 
 .buttons{
   position: absolute;
@@ -85,4 +73,13 @@ h1 {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+}
+
+#weather {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 20px;
+  font-family: Helvetica;
 }
