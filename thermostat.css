@@ -75,7 +75,7 @@ h1 {
   transform: translate(-50%);
 }
 
-#weather {
+#current-temperature {
   position: absolute;
   top: 150px;
   left: 50%;
