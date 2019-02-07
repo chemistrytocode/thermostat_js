@@ -37,8 +37,7 @@ $(document).ready(function () {
 
   };
   function updateUsage() {
-    $('#usage').text(thermostat.currentUsage())
+    // $('#usage').text(thermostat.currentUsage())
     $('#usage').attr('class', thermostat.currentUsage())
-    // $('#usage').css({"background-color: red"});
   }
 })

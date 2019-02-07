@@ -6,7 +6,7 @@ function Thermostat () {
 };
 
 Thermostat.prototype.temperature = function () {
-  return this._degrees
+  return (this._degrees)
 }
 
 Thermostat.prototype.currentUsage = function() {
